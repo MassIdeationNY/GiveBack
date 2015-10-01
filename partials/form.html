@@ -1,0 +1,55 @@
+<section class="formpage">
+	 <button type="submit" value="goHome" ng-click="go('/')">Home</button>
+
+			<h1>Register with Give Back Volunteers</h1>
+			<p>If you choose to register with us you'll be making the <em>world</em> a better place.</p>
+			<form data-ng-attr-novalidate="{{true}}" data-ng-controller="registerController" name="register" data-ng-submit="submitForm(register)" data-ng-cloak> 
+		        <div class="row">
+		            <label for="firstName">First name:</label>
+
+		            <input id="firstName" name="firstName" data-ng-model="fields.firstName" class="formField" type="text"  />
+
+					<div class="errors" data-ng-messages="register.firstName.$error" data-ng-if="register.firstName.$dirty || register.$submitted">
+		        		<p class="error" data-ng-message="required">Please enter your first name.</p>
+		        	</div>
+		        </div><!-- end row -->
+		        <div class="row">
+		            <label for="lastName">Last name:</label>
+
+		            <input id="lastName" name="lastName" data-ng-model="fields.lastName" class="formField" type="text" required />
+
+		        	<div class="errors" data-ng-messages="register.lastName.$error" data-ng-if="register.lastName.$dirty || register.$submitted" role="alert">
+		        		<p class="error" ng-message="required">Please enter your last name.</p>
+		        	</div>
+		        </div>
+		        <div class="row">
+		            <label for="email">E-mail address:</label>
+
+		            <input id="email" name="email" data-ng-model="fields.email" class="formField" type="email" required />
+
+		            <div class="errors" data-ng-messages="register.email.$error" data-ng-if="register.email.$dirty || register.$submitted" role="alert">
+		        		<p class="error" data-ng-message="required">Please enter your e-mail address.</p>
+		        		<p class="error" data-ng-message="email">Please enter a valid e-mail address.</p>
+		        	</div>
+		        </div>
+				<div class="row">
+		            <label for="tel">Contact number:</label>
+
+		            <input id="tel" name="tel" data-ng-model="fields.tel" class="formField" type="tel" data-ng-pattern="/^[0-9]+$/" required />
+		            <div class="errors" data-ng-messages="register.tel.$error" data-ng-if="register.tel.$dirty || register.$submitted" role="alert">
+		        		<p class="error" data-ng-message="required">Please enter your telephone number</p>
+		        		<p class="error" data-ng-message="tel, pattern">Please enter a valid telephone number</p>
+		        	</div>
+		        </div>
+
+		        <div class="row">
+		            <input type="submit" value="Register" />
+		        </div>
+		    </form>
+		</div>
+</section>
+<script type="text/ng-template" id="default-error-messages">
+		<p class="error" data-ng-message="required">This field is required.</p>
+		<p class="error" data-ng-message="minlength">This field is too short.</p>
+		<p class="error" data-ng-message="maxlength">This field is too long.</p>
+	</script>

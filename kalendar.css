@@ -1,0 +1,87 @@
+table {
+  font-family:HelveticaNeue-Light;
+  font-size: 13px;
+  width: 230px;
+  border-collapse:collapse;
+  background-color: white;
+  line-height: 20px;
+}
+th { 
+  padding: 0px;
+  spacing: 0px;
+}
+tr {
+  color:white;
+}
+tr.week {
+  color:black;
+  cursor: pointer;
+}
+
+.weekday_headers
+{
+  line-height: 20px;
+  background-color: black;
+}
+
+.month_tite
+{
+  background-color: black;
+}
+
+.day
+{
+  line-height: 30px;
+  background-color: lightgray;
+  color: black;
+}
+.day:hover {
+  border-top-color: #323333;
+  background: #323333;
+  color: white;
+}
+
+.day-blocked
+{
+  background-color: red;
+  color: white;
+}
+.day-selected
+{
+  background-color: blue;
+  color: white;
+}
+
+.day-blocked:hover {
+  background-color: red;
+  color: white;
+}
+
+.day-done
+{
+  background-color: white;
+}
+
+.day-done:hover
+{
+  background-color: white;
+}
+
+
+
+.month_ctl {
+   border-top: 1px solid #000000;
+   background: #000000;
+   padding: 5.5px 11px;
+   color: white;
+   font-size: 13px;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.month_ctl:hover {
+  border-top-color: black;
+  color: red;
+}
+.month_ctl:active {
+  border-top-color: black;
+ }
