@@ -163,7 +163,9 @@ label {
 .mappage {
   padding: 1em;
 }
-.map {
+
+#map {
+  cursor: pointer;
   height: 320px;
   background: #ccc;
   padding: 1em;
