@@ -1,8 +1,4 @@
 var app = angular.module("GiveBackApp", ['ngRoute', 'register.module', 'ngAria', 'ngMessages', 'ngAnimate']);
-var komp = new Komponent();
-
-var komp_div = $("#map");
-
 
 app.config(['$routeProvider', function($routeProvider) {
   
@@ -42,6 +38,9 @@ app.controller("FormController", function($scope, $http, $location ){
 });//end details controller
 
 app.controller("MapController", function($scope, $http, $location ){
+
+  var komp = new Komponent();
+  var komp_div = $("#map");
 
 komp.insertKomponent(komp_div, "test", function(){
       console.log("picked - create our komponent ");

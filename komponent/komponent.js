@@ -2,19 +2,34 @@
 
 var Komponent = function(){
 
+
   this.insertKomponent = function(div, komp_callback ){
     // listen for clicks in div
     console.log("komponent div: ", div);
 
-   // div.html("HELLO WORLD!");
+   // div.html("HELLO WORLD
+   // click_callback = callback;
+    div.html(mapHTML())
+    
 
-    var internalClickHandler = function(e) {
+   var internalClickHandler = function(e) {
       alert("foo",e);
       console.log("foo",e);
-      div.html("I WAS CLICKED!");
+    //  div.html("I WAS CLICKED!");
       komp_callback();
     }
 
-    div.click(internalClickHandler)
+  div.click(internalClickHandler)  
+
+  } //end insertKomponent
+
+  function mapHTML()
+  {
+    var map_html = '<div>Map Goes Here....You dumb fuck!!!</div><img src="images/TheBronxDowntownDefault-Inkscape.svg" width="300" height="280"> ';
+    return map_html;
   }
-}
+
+  function komp_callback () {
+    alert("Komp Call back function!");
+  }
+}//end Komponent
