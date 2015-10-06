@@ -15,7 +15,7 @@ var Komponent = function(){
    var internalClickHandler = function(e) {
       alert("foo",e);
       console.log("foo",e);
-    //  div.html("I WAS CLICKED!");
+      div.html("I WAS CLICKED!");
       komp_callback();
     }
 
